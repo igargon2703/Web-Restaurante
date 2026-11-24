@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description"
+        content="Discover the two tasting menus and five signature dishes of Azahar, fine dining restaurant in Granada.">
+    <meta name="author" content="Nacho">
+    <title>Tasting Menus · Azahar Fine Dining</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <script src="js/burguer.js" defer></script>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo" aria-label="Azahar - Home">
+                <svg class="logo-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                    <circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="1.5" />
+                    <path
+                        d="M32 10c4 8 4 14 0 22-4-8-4-14 0-22Zm0 44c-4-8-4-14 0-22 4 8 4 14 0 22ZM10 32c8-4 14-4 22 0-8 4-14 4-22 0Zm44 0c-8 4-14 4-22 0 8-4 14-4 22 0Z"
+                        fill="currentColor" />
+                </svg>
+                <span class="logo-text">Azahar</span>
+            </a>
+
+            <!-- Menú hamburguesa: el JS (burguer.js, de la práctica Visual Poetry) solo
+                 alterna la clase "menu-open" en el <body> y actualiza aria-expanded.
+                 Toda la animación la hace el CSS. -->
+            <button class="menu-button" id="nav-icon" type="button" aria-expanded="false"
+                aria-controls="primary-navigation" aria-label="Open menu">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </button>
+
+            <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+                <ul class="main-nav-list">
+                    <li><a href="index.html" class="nav-link" data-replace="Home"><span>Home</span></a></li>
+                    <li><a href="team.html" class="nav-link" data-replace="Team"><span>Team</span></a></li>
+                    <li><a href="menu.html" class="nav-link" data-replace="Menu"
+                            aria-current="page"><span>Menu</span></a></li>
+                    <li><a href="contact.html" class="nav-link" data-replace="Contact"><span>Contact</span></a></li>
+                </ul>
+                <a href="contact.html#reservation" class="button gold-button nav-book-button">
+                    <span>Book a table</span>
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <p class="nav-info">Albaicín · Granada · Since 1998</p>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="page-top" aria-labelledby="page-title">
+            <img class="page-top-photo" src="img/menu-hero.jpg" width="1920" height="900">
+            <div class="container page-top-text">
+                <p class="small-title small-title-light">Autumn - Winter 2026</p>
+                <h1 class="page-top-title" id="page-title">The menu</h1>
+                <p class="page-top-intro">Two tasting menus, served to the whole table and five dishes that have defined
+                    Azahar over the years.</p>
+            </div>
+        </section>
+
+        <section class="section tasting" aria-labelledby="tasting-title">
+            <div class="container">
+                <header class="section-header">
+                    <p class="small-title"><span>01</span>Tasting menus</p>
+                    <h2 class="section-title" id="tasting-title">Choose your<br>journey</h2>
+                    <p class="section-text">Both menus are served for the entire table and take around three hours.
+                        Dinner only, Tuesday to Saturday</p>
+                </header>
+
+                <div class="tasting-menus">
+                    <!-- Menú 1 -->
+                    <article class="menu-card" aria-labelledby="menu-1-title">
+                        <header class="menu-card-header">
+                            <p class="menu-card-courses">9 courses</p>
+                            <h3 class="menu-card-title" id="menu-1-title">Al-Ándalus</h3>
+                            <p class="menu-card-intro">A walk through the flavours of Moorish and Sephardic
+                                Granada.</p>
+                        </header>
+
+                        <ol class="course-list">
+                            <li class="course">
+                                <h4>Garden welcome</h4>
+                                <p>Olives, almonds and three snacks from the orchard</p>
+                            </li>
+                            <li class="course">
+                                <h4>Ajoblanco</h4>
+                                <p>Marcona almond, Motril red prawn, green grape</p>
+                            </li>
+                            <li class="course">
+                                <h4>Bread of the house</h4>
+                                <p>Sourdough with spelt, Sacromonte olive oil</p>
+                            </li>
+                            <li class="course">
+                                <h4>Aubergine &amp; honey</h4>
+                                <p>Crispy aubergine, cane honey, smoked yoghurt</p>
+                            </li>
+                            <li class="course">
+                                <h4>Saffron sea bass</h4>
+                                <p>Baked in salt, saffron beurre blanc</p>
+                            </li>
+                            <li class="course">
+                                <h4>Pastela</h4>
+                                <p>Pigeon, cinnamon, toasted almond, warka pastry</p>
+                            </li>
+                            <li class="course">
+                                <h4>Iberian pork</h4>
+                                <p>Slow-roasted, Alpujarra honey &amp; pomegranate</p>
+                            </li>
+                            <li class="course">
+                                <h4>Pre-dessert</h4>
+                                <p>Mint, cucumber, lime granita</p>
+                            </li>
+                            <li class="course">
+                                <h4>Azahar</h4>
+                                <p>Orange blossom cream, olive oil, honey tuile</p>
+                            </li>
+                        </ol>
+
+                        <dl class="prices">
+                            <div class="price">
+                                <dt>Menu</dt>
+                                <dd>€165</dd>
+                            </div>
+                            <div class="price">
+                                <dt>Wine pairing</dt>
+                                <dd>€95</dd>
+                            </div>
+                            <div class="price">
+                                <dt>Non-alcoholic pairing</dt>
+                                <dd>€60</dd>
+                            </div>
+                        </dl>
+                    </article>
+
+                    <article class="menu-card menu-card-dark" aria-labelledby="menu-2-title">
+                        <header class="menu-card-header">
+                            <p class="menu-card-courses">12 courses <span>Chef´s choice</span></p>
+                            <h3 class="menu-card-title" id="menu-2-title">Sierra & Mar</h3>
+                            <p class="menu-card-intro">From the snow of Sierra Nevada to the Tropical Coast, in twelve
+                                moments</p>
+                        </header>
+
+                        <ol>
+                            <li class="course">
+                                <h4>Garden welcome</h4>
+                                <p>Olives, almonds and five snacks from the orchard</p>
+                            </li>
+                            <li class="course">
+                                <h4>Oyster &amp; snow</h4>
+                                <p>Oyster, cucumber, Sierra Nevada pine granita</p>
+                            </li>
+                            <li class="course">
+                                <h4>Ajoblanco</h4>
+                                <p></p>
+                            </li>
+                            <li class="course">
+                                <h4>Tropical coast</h4>
+                                <p>Red mullet, mango, Almuñécar avocado</p>
+                            </li>
+                            <li class="course">
+                                <h4>Bread of the house</h4>
+                                <p>Sourdough with spelt, Sacromonte olive oil</p>
+                            </li>
+                            <li class="course">
+                                <h4>Wild mushrooms</h4>
+                                <p>Egg yolk, truffle, chestnut</p>
+                            </li>
+                            <li class="course">
+                                <h4>Saffron sea bass</h4>
+                                <p>Baked in salt, saffron beurre blanc</p>
+                            </li>
+                            <li class="course">
+                                <h4>Alpujarra lamb</h4>
+                                <p>Moorish spices, cauliflower couscous</p>
+                            </li>
+                            <li class="course">
+                                <h4>Iberian pork</h4>
+                                <p>Slow-roasted, Alpujarra honey &amp; pomegranate</p>
+                            </li>
+                            <li class="course">
+                                <h4>Cheese</h4>
+                                <p>Goat's cheese from Los Montes, quince</p>
+                            </li>
+                            <li class="course">
+                                <h4>Azahar</h4>
+                                <p>Orange blossom cream, olive oil, honey tuile</p>
+                            </li>
+                            <li class="course">
+                                <h4>Petit fours</h4>
+                                <p>Piononos, Sephardic almond sweets, chocolate</p>
+                            </li>
+                        </ol>
+
+                        <dl class="prices">
+                            <div class="price">
+                                <dt>Menu</dt>
+                                <dd>€210</dd>
+                            </div>
+                            <div class="price">
+                                <dt>Wine pairing</dt>
+                                <dd>€130</dd>
+                            </div>
+                            <div class="price">
+                                <dt>Non-alcoholic pairing</dt>
+                                <dd>€75</dd>
+                            </div>
+                        </dl>
+                    </article>
+                </div>
+
+                <p class="note">Prices include VAT. Vegetarian versions of both menus are available with 48 hours
+                    notice. Please tell us about any allergies when booking.</p>
+            </div>
+        </section>
+
+        <section class="section dark-section signature-dishes" aria-labelledby="signature-title">
+            <div class="container">
+                <header class="section-header">
+                    <p class="small-title small-title-light"><span>02</span>Signature dishes</p>
+                    <h2 class="section-title" id="signature-title">Five dishes<br>that tell our story</h2>
+                    <p class="section-text">Created over almost three decades, they appear in one or both tasting menus.
+                    </p>
+                </header>
+
+                <ol class="dish-list">
+                    <li class="dish">
+                        <figure class="dish-photo photo">
+                            <img src="img/dish-1.jpg">
+                        </figure>
+                        <div class="dish-text">
+                            <span class="dish-number" aria-hidden="true">01</span>
+                            <h3 class="dish-name">Ajoblanco with Motril red prawn</h3>
+                            <p>A cold soup of Marcona almonds, garlic and Sacromonte olive oil, the recipe of Elena's
+                                grandmother. We serve it with a lightly grilled red prawn from Motril and green grapes
+                                marinated in fino sherry.</p>
+                            <dl class="dish-info">
+                                <div>
+                                    <dt>Since</dt>
+                                    <dd>1998</dd>
+                                </div>
+                                <div>
+                                    <dt>Pairing</dt>
+                                    <dd>Fino en rama, Sanlucar</dd>
+                                </div>
+                                <div>
+                                    <dt>Allergens</dt>
+                                    <dd>Nuts, crustaceans, sulphites</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </li>
+
+                    <li class="dish">
+                        <figure class="dish-photo photo">
+                            <img src="img/dish-2.jpg">
+                        </figure>
+                        <div class="dish-text">
+                            <span class="dish-number" aria-hidden="true">02</span>
+                            <h3 class="dish-name">Saffron sea bass baked in salt</h3>
+                            <p>Wild sea bass baked whole in a crust of salt and orange peel, opened at the table and
+                                finished with a beurre blanc infused with saffron from La Mancha.</p>
+                            <dl class="dish-info">
+                                <div>
+                                    <dt>Since</dt>
+                                    <dd>2004</dd>
+                                </div>
+                                <div>
+                                    <dt>Pairing</dt>
+                                    <dd>Albariño, Rias Baixas</dd>
+                                </div>
+                                <div>
+                                    <dt>Allergens</dt>
+                                    <dd>Fish, diary</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </li>
+
+                    <li class="dish">
+                        <figure class="dish-photo photo">
+                            <img src="img/dish-3.jpg">
+                        </figure>
+                        <div class="dish-text">
+                            <span class="dish-number" aria-hidden="true">03</span>
+                            <h3 class="dish-name">Ajoblanco with Motril red prawn</h3>
+                            <p>A tribute to the Moorish kitchens of the Alhambra: pigeon slowly cooked with ras el
+                                hanout, wrapped in crisp warka pastry with toasted almonds and a dusting of cinnamon.
+                            </p>
+                            <dl class="dish-info">
+                                <div>
+                                    <dt>Since</dt>
+                                    <dd>2009</dd>
+                                </div>
+                                <div>
+                                    <dt>Pairing</dt>
+                                    <dd>Garnacha, Sierra de Gredos</dd>
+                                </div>
+                                <div>
+                                    <dt>Allergens</dt>
+                                    <dd>Gluten, nuts</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </li>
+
+                    <li class="dish">
+                        <figure class="dish-photo photo">
+                            <img src="img/dish-4.jpg">
+                        </figure>
+                        <div class="dish-text">
+                            <span class="dish-number" aria-hidden="true">04</span>
+                            <h3 class="dish-name">Alpujarra lamb with Moorish spices</h3>
+                            <p>Lamb from the Vilchez family farm, roasted over holm-oak embers and glazed with cumin,
+                                coriander and preserved lemon. Served with a cauliflower couscous and mint.</p>
+                            <dl class="dish-info">
+                                <div>
+                                    <dt>Since</dt>
+                                    <dd>2018</dd>
+                                </div>
+                                <div>
+                                    <dt>Pairing</dt>
+                                    <dd>Tempranillo, Granada highlands</dd>
+                                </div>
+                                <div>
+                                    <dt>Allergens</dt>
+                                    <dd>Celery, sulphites</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </li>
+
+                    <li class="dish">
+                        <figure class="dish-photo photo">
+                            <img src="img/dish-5.jpg">
+                        </figure>
+                        <div class="dish-text">
+                            <span class="dish-number" aria-hidden="true">05</span>
+                            <h3 class="dish-name">Azahar</h3>
+                            <p>The dessert that gives the house its name: a light orange blossom cream, Sacromonte olive
+                                oil, candied bitter orange and a crisp tuitle of Alpujarra honey.</p>
+                            <dl class="dish-info">
+                                <div>
+                                    <dt>Since</dt>
+                                    <dd>1998</dd>
+                                </div>
+                                <div>
+                                    <dt>Pairing</dt>
+                                    <dd>Moscatel, Málaga</dd>
+                                </div>
+                                <div>
+                                    <dt>Allergens</dt>
+                                    <dd>Dairy, eggs, gluten</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section faq-section" aria-labelledby="faq-title">
+            <div class="container faq">
+                <div class="faq-intro">
+                    <p class="small-title"><span>03</span> Good to know</p>
+                    <h2 class="section-title" id="faq-title">Dietary needs</h2>
+                    <p>We adapt every menu with pleasure. Tell us in advance and the kitchen will prepare.</p>
+                </div>
+
+                <div class="faq-list">
+                    <details class="faq-item" name="faq-menu">
+                        <summary>Do you offer vegetarian or vegan menus?</summary>
+                        <p>Yes. Both tasting menus have a vegetarian version, and a vegan version of Al-Ándalus is
+                            available. Please let us know at least 48 hours before your visit.</p>
+                    </details>
+                    <details class="faq-item" name="faq-menu">
+                        <summary>How do you handle allergies?</summary>
+                        <p>Every dish is listed with its allergens following EU Regulation 1169/2011. Tell us about any
+                            allergy in the reservation form and your waiter will confirm it at the table.</p>
+                    </details>
+                    <details class="faq-item" name="faq-menu">
+                        <summary>Can different guests choose different menus?</summary>
+                        <p>To keep the rhythm of the evening, the same tasting menu is served to the whole table.
+                            Pairings can be chosen individually.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
