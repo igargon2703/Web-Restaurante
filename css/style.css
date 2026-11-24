@@ -1,15 +1,3 @@
-/* =====================================================================
-   AZAHAR · Luxury Restaurant
-   Práctica 3 - Diseño de Interfaces Web (2º DAW)
-   ---------------------------------------------------------------------
-   - Notación BEM (Bloque__Elemento--Modificador)
-   - CSS Nesting, Custom Properties y clamp() para tipografía fluida
-   - Slider solo CSS (radio buttons) · menú hamburguesa con burguer.js
-   - Accesibilidad: skip-link, :focus-visible, contraste AA
-   ===================================================================== */
-
-/* Font embed: Cormorant Garamond (titulares, aire clásico y lujoso),
-   Poppins (texto, la misma de clase) y Pinyon Script (firma del chef) */
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Pinyon+Script&family=Poppins:wght@300;400;500;600&display=swap");
 
 /* ---------------------------------- MINI RESET ---------------------------------- */
@@ -52,32 +40,21 @@ select,
 textarea {
     font: inherit;
     color: inherit;
-    /* los componentes del formulario heredan la fuente de la web */
 }
 
 /* ---------------------------------- CUSTOM PROPERTIES ---------------------------------- */
 
 :root {
-    /* Paleta: negro ébano + marfil + oro (lujo y sobriedad).
-     Todas las combinaciones de texto cumplen WCAG AA (≥ 4.5:1) */
     --ink: #14110f;
-    /* fondo oscuro */
     --ink-2: #1e1a17;
-    /* fondo oscuro secundario (tarjetas) */
     --ivory: #f7f3ec;
-    /* fondo claro */
     --paper: #efe7da;
-    /* fondo claro alternativo */
     --text: #1c1814;
-    /* texto sobre claro       → 16:1 */
+
     --muted: #5f564c;
-    /* texto secundario claro  → 6.6:1 */
     --muted-light: #b8ad9c;
-    /* texto secundario oscuro → 8.4:1 */
     --gold: #c9a45c;
-    /* oro sobre oscuro        → 8:1   */
     --gold-deep: #7f6129;
-    /* oro sobre claro         → 5.3:1 */
     --line: rgba(28, 24, 20, 0.15);
     --line-light: rgba(247, 243, 236, 0.18);
 
@@ -89,7 +66,6 @@ textarea {
     --gutter: clamp(1.25rem, 4vw, 3rem);
     --section-space: clamp(4.5rem, 3rem + 6vw, 9rem);
     --radius: 2px;
-    /* el lujo se lleva con esquinas casi rectas */
     --header-h: 5rem;
 
     @media (max-width: 640px) {
@@ -110,7 +86,6 @@ textarea {
     outline-offset: 4px;
 }
 
-/* Skip link: oculto hasta que se pulsa Tab por primera vez */
 .skip-link {
     position: fixed;
     top: 0.75rem;
@@ -164,7 +139,7 @@ strong {
     margin-inline: auto;
 }
 
-.lead {
+.big-text {
     font-family: var(--font-display);
     font-size: clamp(1.35rem, 1.1rem + 0.8vw, 1.75rem);
     font-weight: 500;
@@ -187,7 +162,7 @@ strong {
     padding-block: var(--section-space);
 }
 
-.section--dark {
+.dark-section {
     background: var(--ink);
     color: var(--ivory);
 
@@ -196,19 +171,18 @@ strong {
     }
 }
 
-.section--paper {
+.beige-section {
     background: var(--paper);
 }
 
-/* Cabecera de sección: título a la izquierda, nota a la derecha */
-.section-heading {
+.section-header {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(14rem, 24rem);
     align-items: end;
     gap: 1rem clamp(2rem, 5vw, 6rem);
     margin-bottom: clamp(2.5rem, 2rem + 2.5vw, 4.5rem);
 
-    .eyebrow {
+    .small-title {
         grid-column: 1 / -1;
     }
 
@@ -217,12 +191,12 @@ strong {
     }
 }
 
-.section-heading--stacked {
+.section-header-simple {
     grid-template-columns: 1fr;
     margin-bottom: 2rem;
 }
 
-.eyebrow {
+.small-title {
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -239,7 +213,6 @@ strong {
         letter-spacing: 0;
     }
 
-    /* línea decorativa antes del texto */
     &::before {
         content: "";
         width: 2.5rem;
@@ -248,7 +221,7 @@ strong {
     }
 }
 
-.eyebrow--light {
+.small-title-light {
     color: var(--gold);
 
     &::before {
@@ -264,20 +237,17 @@ strong {
     letter-spacing: -0.01em;
 }
 
-.section-note {
+.section-text {
     color: var(--muted);
 
-    .section--dark & {
+    .dark-section & {
         color: var(--muted-light);
     }
 }
 
-/* --- Botones (misma animación de "caja que sube" de la práctica anterior) --- */
-
-.btn {
+.button {
     position: relative;
     z-index: 0;
-    /* para que el ::before con z-index -1 quede detrás del texto pero dentro del botón */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -327,7 +297,7 @@ strong {
     }
 }
 
-.btn--gold {
+.gold-button {
     background: var(--gold);
     color: var(--ink);
 
@@ -336,7 +306,7 @@ strong {
     }
 }
 
-.btn--ghost {
+.outline-button {
     border-color: rgba(247, 243, 236, 0.6);
     color: var(--ivory);
 
@@ -383,7 +353,7 @@ strong {
 }
 
 /* Marco de imagen con etiqueta */
-.media-frame {
+.photo {
     position: relative;
 
     img {
@@ -394,8 +364,7 @@ strong {
     }
 }
 
-/* Variante: marco dorado desplazado detrás de la foto */
-.media-frame--gold {
+.photo-gold-frame {
     &::before {
         content: "";
         position: absolute;
@@ -411,7 +380,7 @@ strong {
     }
 }
 
-.media-tag {
+.photo-label {
     position: absolute;
     left: 1rem;
     bottom: 1rem;
@@ -453,17 +422,15 @@ strong {
    HEADER + NAVEGACIÓN
    ====================================================================== */
 
-.site-header {
+.header {
     position: sticky;
     top: 0;
     z-index: 100;
     background: var(--ink);
     color: var(--ivory);
     border-bottom: 1px solid var(--line-light);
-    /* OJO: no usamos backdrop-filter aquí porque convertiría el header en el
-     "containing block" del nav fijo y el menú móvil no ocuparía la pantalla */
 
-    .header__inner {
+    .header-content {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -472,7 +439,7 @@ strong {
     }
 }
 
-.brand {
+.logo {
     position: relative;
     z-index: 3;
     /* queda por encima del menú móvil abierto */
@@ -482,13 +449,13 @@ strong {
     color: var(--gold);
     text-decoration: none;
 
-    .brand__logo {
+    .logo-icon {
         width: clamp(2.25rem, 2rem + 0.8vw, 2.75rem);
         height: auto;
         transition: transform 0.6s ease-in-out;
     }
 
-    .brand__name {
+    .logo-text {
         font-family: var(--font-display);
         font-size: clamp(1.4rem, 1.2rem + 0.6vw, 1.75rem);
         font-weight: 500;
@@ -497,29 +464,26 @@ strong {
         color: var(--ivory);
     }
 
-    &:hover .brand__logo {
+    &:hover .logo-icon {
         transform: rotate(45deg);
     }
 }
 
-/* --- Navegación principal (escritorio) --- */
-
-.primary-nav {
+.main-nav {
     display: flex;
     align-items: center;
     gap: clamp(1.5rem, 3vw, 3rem);
 
-    .primary-nav__list {
+    .main-nav-list {
         display: flex;
         gap: clamp(1.25rem, 2.5vw, 2.5rem);
     }
 
-    .primary-nav__meta {
+    .nav-info {
         display: none;
     }
 }
 
-/* Animación del enlace (atributo data-replace, como en la práctica anterior) */
 .nav-link {
     position: relative;
     display: block;
@@ -549,7 +513,6 @@ strong {
         transition: transform 0.35s ease-in-out;
     }
 
-    /* texto dorado que entra desde la derecha */
     &::after {
         content: attr(data-replace);
         position: absolute;
@@ -577,7 +540,6 @@ strong {
         }
     }
 
-    /* página actual (Nielsen: "visibilidad del estado del sistema") */
     &[aria-current="page"] {
         color: var(--gold);
 
@@ -587,10 +549,7 @@ strong {
     }
 }
 
-/* --- Menú hamburguesa (botón + burguer.js de la práctica Visual Poetry) ---
-   El JS solo pone/quita la clase .menu-open en el <body>; el resto es CSS. */
-
-.menu-toggle {
+.menu-button {
     position: relative;
     z-index: 3;
     display: none;
@@ -603,7 +562,7 @@ strong {
     background: transparent;
     cursor: pointer;
 
-    .menu-toggle__bar {
+    .menu-line {
         position: absolute;
         left: 50%;
         height: 1.5px;
@@ -630,12 +589,12 @@ strong {
 }
 
 @media (max-width: 900px) {
-    .menu-toggle {
+    .menu-button {
         display: block;
     }
 
     /* Hamburguesa → X cuando el menú está abierto */
-    body.menu-open .menu-toggle .menu-toggle__bar {
+    body.menu-open .menu-button .menu-line {
         &:nth-child(1) {
             top: 23px;
             transform: translateX(-50%) rotate(45deg);
@@ -653,8 +612,7 @@ strong {
         }
     }
 
-    /* Panel del menú: fuera de la pantalla hasta que se marca el checkbox */
-    .primary-nav {
+    .main-nav {
         position: fixed;
         inset: 0;
         z-index: 2;
@@ -664,7 +622,7 @@ strong {
         gap: 2.5rem;
         height: 100vh;
         height: 100dvh;
-        padding: calc(var(--header-h) + 2rem) var(--gutter) calc(2rem + env(safe-area-inset-bottom, 0px));
+        padding: 7rem 1.5rem 2rem;
         overflow-y: auto;
         background: var(--ink);
         visibility: hidden;
@@ -676,7 +634,7 @@ strong {
             transform 0.6s ease-in-out,
             visibility 0s linear 0.6s;
 
-        .primary-nav__list {
+        .main-nav-list {
             flex-direction: column;
             gap: 0.5rem;
             width: 100%;
@@ -707,7 +665,7 @@ strong {
             text-transform: none;
         }
 
-        .primary-nav__meta {
+        .nav-info {
             display: block;
             color: var(--muted-light);
             font-size: 0.75rem;
@@ -716,7 +674,7 @@ strong {
         }
     }
 
-    body.menu-open .primary-nav {
+    body.menu-open .main-nav {
         visibility: visible;
         opacity: 1;
         transform: translateX(0);
@@ -744,7 +702,7 @@ strong {
     background: var(--ink);
     z-index: 0;
 
-    .hero__bg {
+    .hero-photo {
         position: absolute;
         inset: 0;
         z-index: -2;
@@ -753,7 +711,6 @@ strong {
         object-fit: cover;
     }
 
-    /* degradado para asegurar el contraste del texto sobre la foto */
     &::before {
         content: "";
         position: absolute;
@@ -762,12 +719,12 @@ strong {
         background: rgba(20, 17, 15, 0.7);
     }
 
-    .hero__content {
+    .hero-text {
         align-self: center;
         padding-block: clamp(4rem, 8vw, 7rem);
     }
 
-    .hero__title {
+    .hero-title {
         margin-top: 1.25rem;
         margin-bottom: 1.5rem;
         font-family: var(--font-display);
@@ -778,14 +735,14 @@ strong {
         text-transform: uppercase;
     }
 
-    .hero__lead {
+    .hero-intro {
         max-width: 34rem;
         margin-bottom: 2.5rem;
         color: #e4dccf;
         font-size: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);
     }
 
-    .hero__actions {
+    .hero-buttons {
         display: flex;
         gap: 1rem;
 
@@ -795,7 +752,7 @@ strong {
         }
     }
 
-    .hero__facts {
+    .hero-facts {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         border-top: 1px solid var(--line-light);
@@ -847,17 +804,17 @@ strong {
    HOME · ESSENCE
    ====================================================================== */
 
-.essence__body {
+.essence-content {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
     gap: clamp(2.5rem, 6vw, 6rem);
 
-    .essence__media img {
+    .essence-photo img {
         aspect-ratio: 4 / 3;
     }
 
-    .essence__text {
+    .essence-text {
         display: grid;
         gap: 1.5rem;
     }
@@ -867,7 +824,7 @@ strong {
     }
 }
 
-.pillars {
+.values {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
@@ -875,7 +832,7 @@ strong {
     padding-top: 2rem;
     border-top: 1px solid var(--line);
 
-    .pillar__index {
+    .value-number {
         color: var(--gold-deep);
         font-family: var(--font-display);
         font-size: 1.25rem;
@@ -905,13 +862,13 @@ strong {
    HOME · STORY + TIMELINE
    ====================================================================== */
 
-.story__grid {
+.story-content {
     display: grid;
     grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
     align-items: center;
     gap: clamp(3rem, 7vw, 7rem);
 
-    .story__media {
+    .story-photo {
         z-index: 0;
 
         img {
@@ -919,7 +876,7 @@ strong {
         }
     }
 
-    .story__text>p {
+    .story-text>p {
         margin-bottom: 1.25rem;
         color: var(--muted-light);
     }
@@ -927,7 +884,7 @@ strong {
     @media (max-width: 900px) {
         grid-template-columns: 1fr;
 
-        .story__media {
+        .story-photo {
             max-width: 30rem;
         }
     }
@@ -939,7 +896,7 @@ strong {
     gap: 1.75rem 2.5rem;
     margin-top: 2.5rem;
 
-    .timeline__item {
+    .timeline-item {
         padding-left: 1.25rem;
         border-left: 1px solid var(--gold);
 
@@ -950,7 +907,7 @@ strong {
         }
     }
 
-    .timeline__year {
+    .timeline-year {
         display: block;
         color: var(--gold);
         font-family: var(--font-display);
@@ -964,21 +921,21 @@ strong {
 }
 
 /* ======================================================================
-   HOME · SLIDER SOLO CSS (técnica de la práctica 2, ahora responsive)
+   HOME · SLIDER
    ====================================================================== */
 
 .slider {
     position: relative;
 
     /* Radios ocultos visualmente (NO display:none) → siguen siendo accesibles con teclado */
-    .slider__radio {
+    .slider-input {
         position: absolute;
         width: 1px;
         height: 1px;
         opacity: 0;
     }
 
-    .slider__viewport {
+    .slider-window {
         overflow: hidden;
         /* recorta la "cinta" para que solo se vea una foto */
         aspect-ratio: 16 / 8;
@@ -990,7 +947,7 @@ strong {
         }
     }
 
-    .slider__track {
+    .slider-strip {
         display: flex;
         height: 100%;
         transition: transform 0.8s ease-in-out;
@@ -1008,7 +965,7 @@ strong {
         }
     }
 
-    .slide__caption {
+    .slide-caption {
         position: absolute;
         inset: auto 0 0 0;
         padding: clamp(1.5rem, 4vw, 3rem);
@@ -1033,7 +990,7 @@ strong {
     }
 
     /* --- Flechas --- */
-    .slider__arrows {
+    .slider-arrows {
         position: absolute;
         inset: auto clamp(1rem, 3vw, 2.5rem) clamp(1.5rem, 4vw, 3rem) auto;
         display: flex;
@@ -1044,7 +1001,7 @@ strong {
         }
     }
 
-    .slider__arrow {
+    .slider-arrow {
         display: none;
         /* solo se ven las dos del estado actual */
         align-items: center;
@@ -1066,7 +1023,7 @@ strong {
     }
 
     /* --- Puntos --- */
-    .slider__dots {
+    .slider-dots {
         display: flex;
         justify-content: center;
         gap: 0.75rem;
@@ -1075,7 +1032,6 @@ strong {
         label {
             width: 2.5rem;
             height: 1.5rem;
-            /* zona clicable más grande que la línea visible */
             cursor: pointer;
             position: relative;
 
@@ -1095,32 +1051,30 @@ strong {
     }
 }
 
-/* --- Control del slider: estado → posición de la cinta --- */
-#house-2:checked~.slider__viewport .slider__track {
+#house-2:checked~.slider-window .slider-strip {
     transform: translateX(-100%);
 }
 
-#house-3:checked~.slider__viewport .slider__track {
+#house-3:checked~.slider-window .slider-strip {
     transform: translateX(-200%);
 }
 
-#house-4:checked~.slider__viewport .slider__track {
+#house-4:checked~.slider-window .slider-strip {
     transform: translateX(-300%);
 }
 
-/* Flechas visibles según la posición (data-for = slide actual) */
-#house-1:checked~.slider__arrows [data-for="1"],
-#house-2:checked~.slider__arrows [data-for="2"],
-#house-3:checked~.slider__arrows [data-for="3"],
-#house-4:checked~.slider__arrows [data-for="4"] {
+#house-1:checked~.slider-arrows [data-for="1"],
+#house-2:checked~.slider-arrows [data-for="2"],
+#house-3:checked~.slider-arrows [data-for="3"],
+#house-4:checked~.slider-arrows [data-for="4"] {
     display: flex;
 }
 
 /* Punto activo */
-#house-1:checked~.slider__dots label[for="house-1"],
-#house-2:checked~.slider__dots label[for="house-2"],
-#house-3:checked~.slider__dots label[for="house-3"],
-#house-4:checked~.slider__dots label[for="house-4"] {
+#house-1:checked~.slider-dots label[for="house-1"],
+#house-2:checked~.slider-dots label[for="house-2"],
+#house-3:checked~.slider-dots label[for="house-3"],
+#house-4:checked~.slider-dots label[for="house-4"] {
     &::before {
         height: 3px;
         background: var(--gold-deep);
@@ -1128,10 +1082,10 @@ strong {
 }
 
 /* Foco de teclado: se marca el punto del radio enfocado */
-#house-1:focus-visible~.slider__dots label[for="house-1"],
-#house-2:focus-visible~.slider__dots label[for="house-2"],
-#house-3:focus-visible~.slider__dots label[for="house-3"],
-#house-4:focus-visible~.slider__dots label[for="house-4"] {
+#house-1:focus-visible~.slider-dots label[for="house-1"],
+#house-2:focus-visible~.slider-dots label[for="house-2"],
+#house-3:focus-visible~.slider-dots label[for="house-3"],
+#house-4:focus-visible~.slider-dots label[for="house-4"] {
     outline: 2px solid var(--gold-deep);
     outline-offset: 2px;
 }
@@ -1145,7 +1099,7 @@ strong {
     background: var(--paper);
     text-align: center;
 
-    .quote__inner {
+    .quote-content {
         max-width: 58rem;
     }
 
@@ -1171,10 +1125,10 @@ strong {
 }
 
 /* ======================================================================
-   HOME · EXPLORE CARDS
+   HOME
    ====================================================================== */
 
-.explore__grid {
+.explore-cards {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: clamp(1.5rem, 3vw, 3rem);
@@ -1191,7 +1145,7 @@ strong {
     padding-top: 1.5rem;
     border-top: 1px solid var(--text);
 
-    .explore-card__index {
+    .explore-card-number {
         color: var(--gold-deep);
         font-family: var(--font-display);
         font-size: 1.25rem;
@@ -1212,10 +1166,10 @@ strong {
 }
 
 /* ======================================================================
-   PÁGINAS INTERIORES · PAGE HERO
+   PAGE HERO
    ====================================================================== */
 
-.page-hero {
+.page-top {
     position: relative;
     display: grid;
     align-items: end;
@@ -1225,7 +1179,7 @@ strong {
     color: var(--ivory);
     z-index: 0;
 
-    .page-hero__bg {
+    .page-top-photo {
         position: absolute;
         inset: 0;
         z-index: -2;
@@ -1242,7 +1196,7 @@ strong {
         background: rgba(20, 17, 15, 0.72);
     }
 
-    .page-hero__title {
+    .page-top-title {
         margin-top: 1rem;
         margin-bottom: 1rem;
         font-family: var(--font-display);
@@ -1251,7 +1205,7 @@ strong {
         line-height: 0.95;
     }
 
-    .page-hero__lead {
+    .page-top-intro {
         max-width: 36rem;
         color: #e4dccf;
     }
@@ -1261,11 +1215,10 @@ strong {
    TEAM
    ====================================================================== */
 
-/* Índice de la jerarquía del equipo */
-.hierarchy {
+.team-index {
     margin-top: -1px;
 
-    .hierarchy__list {
+    .team-index-list {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         border-bottom: 1px solid var(--line);
@@ -1297,7 +1250,7 @@ strong {
     }
 
     @media (max-width: 760px) {
-        .hierarchy__list {
+        .team-index-list {
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
@@ -1307,14 +1260,13 @@ strong {
     }
 }
 
-/* Nivel 1: Head chef */
-.head-chef__grid {
+.head-chef-content {
     display: grid;
     grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
     align-items: center;
     gap: clamp(3rem, 7vw, 7rem);
 
-    .head-chef__media {
+    .head-chef-photo {
         z-index: 0;
 
         img {
@@ -1322,11 +1274,11 @@ strong {
         }
     }
 
-    .head-chef__text {
+    .head-chef-text {
         display: grid;
         gap: 1.25rem;
 
-        >p:not(.lead) {
+        >p:not(.big-text) {
             color: var(--muted);
         }
     }
@@ -1334,13 +1286,13 @@ strong {
     @media (max-width: 900px) {
         grid-template-columns: 1fr;
 
-        .head-chef__media {
+        .head-chef-photo {
             max-width: 30rem;
         }
     }
 }
 
-.facts {
+.chef-facts {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
@@ -1367,8 +1319,7 @@ strong {
     }
 }
 
-/* Nivel 2: foto de la brigada de cocina */
-.brigade {
+.kitchen-photo {
     margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
 
     img {
@@ -1381,13 +1332,13 @@ strong {
 }
 
 /* Tarjetas de miembros del equipo */
-.team-grid {
+.team-cards {
     display: grid;
     align-items: start;
     gap: clamp(1.5rem, 3vw, 3rem);
 }
 
-.team-grid--3 {
+.three-columns {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
     @media (max-width: 900px) {
@@ -1399,7 +1350,7 @@ strong {
     }
 }
 
-.team-grid--2 {
+.two-columns {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
     @media (max-width: 900px) {
@@ -1407,11 +1358,11 @@ strong {
     }
 }
 
-.member {
+.team-card {
     display: grid;
     gap: 1.25rem;
 
-    .member__media {
+    .team-card-photo {
         overflow: hidden;
         border-radius: var(--radius);
 
@@ -1423,23 +1374,23 @@ strong {
         }
     }
 
-    &:hover .member__media img {
+    &:hover .team-card-photo img {
         transform: scale(1.04);
     }
 
-    .member__role {
+    .team-card-role {
         color: var(--gold-deep);
         font-size: 0.7rem;
         font-weight: 500;
         letter-spacing: 0.2em;
         text-transform: uppercase;
 
-        .section--dark & {
+        .dark-section & {
             color: var(--gold);
         }
     }
 
-    .member__name {
+    .team-card-name {
         margin-top: 0.25rem;
         margin-bottom: 0.6rem;
         font-family: var(--font-display);
@@ -1448,19 +1399,19 @@ strong {
         line-height: 1.1;
     }
 
-    .member__body>p:last-child {
+    .team-card-text>p:last-child {
         color: var(--muted);
         font-size: 0.92rem;
         line-height: 1.65;
 
-        .section--dark & {
+        .dark-section & {
             color: var(--muted-light);
         }
     }
 }
 
 /* Variante horizontal (sommeliers y dirección) */
-.member--horizontal {
+.team-card-wide {
     grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
     align-items: center;
     gap: clamp(1.25rem, 2.5vw, 2.5rem);
@@ -1470,22 +1421,19 @@ strong {
     }
 }
 
-/* ======================================================================
-   CTA (llamada a la acción final)
-   ====================================================================== */
 
-.cta {
+.book-banner {
     padding-block: clamp(4rem, 8vw, 7rem);
     text-align: center;
 
-    .cta__inner {
+    .book-banner-content {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1.25rem;
     }
 
-    .cta__title {
+    .book-banner-title {
         font-family: var(--font-display);
         font-size: clamp(2.5rem, 1.8rem + 3vw, 4.5rem);
         font-weight: 400;
@@ -1502,7 +1450,7 @@ strong {
    MENU · TASTING MENUS
    ====================================================================== */
 
-.tasting__grid {
+.tasting-menus {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: clamp(1.5rem, 3vw, 3rem);
@@ -1513,19 +1461,19 @@ strong {
     }
 }
 
-.tasting-menu {
+.menu-card {
     padding: clamp(1.75rem, 4vw, 3.5rem);
     border: 1px solid var(--line);
     background: #fbf8f3;
 
-    .tasting-menu__header {
+    .menu-card-header {
         padding-bottom: 1.75rem;
         margin-bottom: 1.75rem;
         border-bottom: 1px solid var(--line);
         text-align: center;
     }
 
-    .tasting-menu__courses {
+    .menu-card-courses {
         color: var(--gold-deep);
         font-size: 0.72rem;
         font-weight: 500;
@@ -1533,7 +1481,7 @@ strong {
         text-transform: uppercase;
     }
 
-    .tasting-menu__title {
+    .menu-card-title {
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
         font-family: var(--font-display);
@@ -1542,7 +1490,7 @@ strong {
         line-height: 1;
     }
 
-    .tasting-menu__intro {
+    .menu-card-intro {
         color: var(--muted);
         font-family: var(--font-display);
         font-size: 1.2rem;
@@ -1551,29 +1499,29 @@ strong {
 }
 
 /* Variante destacada (oscura) */
-.tasting-menu--featured {
+.menu-card-dark {
     background: var(--ink);
     color: var(--ivory);
     border-color: var(--ink);
 
-    .tasting-menu__header,
-    .price-list,
-    .price-list__item {
+    .menu-card-header,
+    .prices,
+    .price {
         border-color: var(--line-light);
     }
 
-    .tasting-menu__courses {
+    .menu-card-courses {
         color: var(--gold);
     }
 
-    .tasting-menu__intro,
+    .menu-card-intro,
     .course p,
-    .price-list dt {
+    .prices dt {
         color: var(--muted-light);
     }
 
     .course::before,
-    .price-list dd {
+    .prices dd {
         color: var(--gold);
     }
 }
@@ -1587,8 +1535,7 @@ strong {
     font-size: 0.62rem;
 }
 
-/* Lista de platos con numeración automática (counter) */
-.courses {
+.course-list {
     display: grid;
     gap: 1.1rem;
     counter-reset: course;
@@ -1597,7 +1544,6 @@ strong {
         position: relative;
         padding-left: 2.75rem;
 
-        /* número automático de cada plato (01, 02…) */
         &::before {
             counter-increment: course;
             content: counter(course);
@@ -1625,14 +1571,14 @@ strong {
     }
 }
 
-.price-list {
+.prices {
     display: grid;
     gap: 0.6rem;
     margin-top: 2rem;
     padding-top: 1.5rem;
     border-top: 1px solid var(--line);
 
-    .price-list__item {
+    .price {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
@@ -1668,7 +1614,7 @@ strong {
    MENU · SIGNATURE DISHES
    ====================================================================== */
 
-.dishes {
+.dish-list {
     display: grid;
     gap: clamp(3.5rem, 7vw, 7rem);
 }
@@ -1679,16 +1625,15 @@ strong {
     align-items: center;
     gap: clamp(2rem, 6vw, 6rem);
 
-    .dish__media img {
+    .dish-photo img {
         aspect-ratio: 4 / 3;
     }
 
-    /* alternamos imagen izquierda / derecha para dar ritmo */
-    &:nth-child(even) .dish__media {
+    &:nth-child(even) .dish-photo {
         order: 2;
     }
 
-    .dish__index {
+    .dish-number {
         display: block;
         color: var(--gold);
         font-family: var(--font-display);
@@ -1697,7 +1642,7 @@ strong {
         line-height: 1;
     }
 
-    .dish__name {
+    .dish-name {
         margin-top: 0.75rem;
         margin-bottom: 1rem;
         font-family: var(--font-display);
@@ -1706,11 +1651,11 @@ strong {
         line-height: 1.1;
     }
 
-    .dish__body>p {
+    .dish-text>p {
         color: var(--muted-light);
     }
 
-    .dish__meta {
+    .dish-info {
         display: grid;
         gap: 0.4rem;
         margin-top: 1.5rem;
@@ -1735,7 +1680,7 @@ strong {
     @media (max-width: 800px) {
         grid-template-columns: 1fr;
 
-        &:nth-child(even) .dish__media {
+        &:nth-child(even) .dish-photo {
             order: 0;
         }
     }
@@ -1750,7 +1695,7 @@ strong {
     grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
     gap: clamp(2rem, 6vw, 6rem);
 
-    .faq__intro {
+    .faq-intro {
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -1788,7 +1733,6 @@ strong {
             display: none;
         }
 
-        /* icono + que gira a × al abrir */
         &::after {
             content: "+";
             flex: 0 0 auto;
@@ -1814,7 +1758,6 @@ strong {
         transform: rotate(45deg);
     }
 
-    /* animación de apertura (la misma de la práctica Visual Poetry) */
     @media (prefers-reduced-motion: no-preference) {
         &::details-content {
             block-size: 0;
@@ -1840,7 +1783,7 @@ strong {
    CONTACT
    ====================================================================== */
 
-.contact__grid {
+.contact-content {
     display: grid;
     grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
     align-items: start;
@@ -1849,14 +1792,13 @@ strong {
     @media (max-width: 1000px) {
         grid-template-columns: 1fr;
 
-        /* en tablet y móvil el formulario de reserva aparece primero */
-        .reservation {
+        .booking-box {
             order: -1;
         }
     }
 }
 
-.contact__info {
+.contact-info {
     display: grid;
     gap: 1.25rem;
 
@@ -1872,7 +1814,7 @@ strong {
     color: var(--muted);
     font-size: 0.85rem;
 
-    .availability__dot {
+    .availability-dot {
         width: 0.6rem;
         height: 0.6rem;
         border-radius: 50%;
@@ -1881,7 +1823,7 @@ strong {
     }
 }
 
-.contact__details {
+.contact-details {
     display: grid;
     gap: 1.25rem;
     padding-block: 1.5rem;
@@ -1890,7 +1832,7 @@ strong {
     font-style: normal;
 }
 
-.contact__label {
+.contact-label {
     display: block;
     color: var(--gold-deep);
     font-size: 0.7rem;
@@ -1899,7 +1841,7 @@ strong {
     text-transform: uppercase;
 }
 
-.contact__link {
+.contact-link {
     font-family: var(--font-display);
     font-size: clamp(1.3rem, 1.1rem + 0.6vw, 1.6rem);
     font-weight: 500;
@@ -1911,7 +1853,7 @@ strong {
     }
 }
 
-.contact__subtitle {
+.contact-subtitle {
     margin-top: 1rem;
     font-family: var(--font-display);
     font-size: 1.6rem;
@@ -1921,7 +1863,7 @@ strong {
 .hours {
     display: grid;
 
-    .hours__row {
+    .hours-row {
         display: flex;
         justify-content: space-between;
         gap: 1rem;
@@ -1940,12 +1882,12 @@ strong {
 
 /* --- Panel de reserva --- */
 
-.reservation {
+.booking-box {
     padding: clamp(1.75rem, 4vw, 3.5rem);
     background: var(--ink);
     color: var(--ivory);
 
-    .reservation__heading {
+    .booking-header {
         display: grid;
         gap: 0.75rem;
         margin-bottom: 2rem;
@@ -1956,7 +1898,7 @@ strong {
         }
     }
 
-    .reservation__title {
+    .booking-title {
         font-family: var(--font-display);
         font-size: clamp(2.25rem, 1.8rem + 2vw, 3.5rem);
         font-weight: 500;
@@ -1978,8 +1920,7 @@ strong {
     display: grid;
     gap: 2rem;
 
-    /* agrupaciones con fieldset + legend (WCAG 1.3.1) */
-    .form__group {
+    .form-group {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1.5rem 1.25rem;
@@ -2004,7 +1945,7 @@ strong {
         }
     }
 
-    .form__submit {
+    .form-button {
         justify-self: start;
 
         @media (max-width: 560px) {
@@ -2052,18 +1993,17 @@ strong {
         resize: none;
     }
 
-    .form-field__hint {
+    .field-hint {
         color: var(--muted-light);
         font-size: 0.78rem;
     }
 }
 
-.form-field--full {
+.full-width {
     grid-column: 1 / -1;
 }
 
-/* Opciones de menú tipo "tarjeta" con radio buttons */
-.choice {
+.menu-choice {
     padding: 0;
     border: 0;
 
@@ -2072,7 +2012,7 @@ strong {
         padding: 0;
     }
 
-    .choice__options {
+    .menu-choice-options {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 0.75rem;
@@ -2082,7 +2022,7 @@ strong {
         }
     }
 
-    .choice__option {
+    .menu-choice-option {
         display: flex;
         gap: 0.75rem;
         align-items: flex-start;
@@ -2104,7 +2044,6 @@ strong {
             margin-top: 0.2rem;
         }
 
-        /* radio marcado → el texto de su opción se pone dorado (selector + de hermano) */
         input:checked+span {
             color: var(--gold);
         }
@@ -2135,13 +2074,13 @@ strong {
    FOOTER
    ====================================================================== */
 
-.site-footer {
+.footer {
     padding-block: clamp(3.5rem, 6vw, 5.5rem) 2rem;
     background: var(--ink);
     color: var(--ivory);
     border-top: 1px solid var(--line-light);
 
-    .footer__inner {
+    .footer-content {
         display: grid;
         grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr));
         gap: 2.5rem;
@@ -2155,7 +2094,7 @@ strong {
         }
     }
 
-    .footer__brand {
+    .footer-logo {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -2166,7 +2105,7 @@ strong {
         }
     }
 
-    .footer__tagline {
+    .footer-slogan {
         max-width: 22rem;
         color: var(--muted-light);
         font-family: var(--font-display);
@@ -2174,7 +2113,7 @@ strong {
         font-style: italic;
     }
 
-    .footer__col {
+    .footer-column {
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
@@ -2194,7 +2133,7 @@ strong {
         }
     }
 
-    .footer__title {
+    .footer-title {
         color: var(--gold);
         font-size: 0.72rem;
         font-weight: 500;
@@ -2202,12 +2141,12 @@ strong {
         text-transform: uppercase;
     }
 
-    .footer__nav ul {
+    .footer-nav ul {
         display: grid;
         gap: 0.4rem;
     }
 
-    .footer__legal {
+    .footer-bottom {
         grid-column: 1 / -1;
         display: flex;
         justify-content: space-between;

@@ -15,40 +15,41 @@
 
 <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
-    <header class="site-header">
-        <div class="container header__inner">
-            <a href="index.html" class="brand" aria-label="Azahar - Home">
-                <svg class="brand__logo" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+
+    <!-- ========================= HEADER ========================= -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo" aria-label="Azahar - Home">
+                <svg class="logo-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
                     <circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="1.5" />
-                    <path
-                        d="M32 10c4 8 4 14 0 22-4-8-4-14 0-22Zm0 44c-4-8-4-14 0-22 4 8 4 14 0 22ZM10 32c8-4 14-4 22 0-8 4-14 4-22 0Zm44 0c-8 4-14 4-22 0 8-4 14-4 22 0Z"
+                    <path d="M32 10c4 8 4 14 0 22-4-8-4-14 0-22Zm0 44c-4-8-4-14 0-22 4 8 4 14 0 22ZM10 32c8-4 14-4 22 0-8 4-14 4-22 0Zm44 0c-8 4-14 4-22 0 8-4 14-4 22 0Z"
                         fill="currentColor" />
                 </svg>
-                <span class="brand__name">Azahar</span>
+                <span class="logo-text">Azahar</span>
             </a>
-            <button class="menu-toggle" id="nav-icon" type="button" aria-expanded="false"
+
+            <button class="menu-button" id="nav-icon" type="button" aria-expanded="false"
                 aria-controls="primary-navigation" aria-label="Open menu">
-                <span class="menu-toggle__bar"></span>
-                <span class="menu-toggle__bar"></span>
-                <span class="menu-toggle__bar"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
             </button>
 
-            <nav class="primary-nav" id="primary-navigation" aria-label="Primary">
-                <ul class="primary-nav__list">
-                    <li><a href="index.html" class="nav-link" data-replace="Home"
-                            aria-current="page"><span>Home</span></a></li>
+            <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+                <ul class="main-nav-list">
+                    <li><a href="index.html" class="nav-link" data-replace="Home" aria-current="page"><span>Home</span></a></li>
                     <li><a href="team.html" class="nav-link" data-replace="Team"><span>Team</span></a></li>
                     <li><a href="menu.html" class="nav-link" data-replace="Menu"><span>Menu</span></a></li>
                     <li><a href="contact.html" class="nav-link" data-replace="Contact"><span>Contact</span></a></li>
                 </ul>
-                <a href="contact.html#reservation" class="btn btn--gold primary-nav__cta">
+                <a href="contact.html#reservation" class="button gold-button nav-book-button">
                     <span>Book a table</span>
                     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                         <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                             stroke-linejoin="round" />
                     </svg>
                 </a>
-                <p class="primary-nav__meta">Albaicín · Granada · Since 1998</p>
+                <p class="nav-info">Albaicín · Granada · Since 1998</p>
             </nav>
         </div>
     </header>
@@ -56,28 +57,28 @@
     <main id="main-content">
 
         <section class="hero" aria-labelledby="hero-title">
-            <img class="hero__bg" src="img/hero.jpg"
+            <img class="hero-photo" src="img/hero.jpg"
                 alt="Candle-lit dining room of Azahar with the Alhambra illuminated through the windows" width="1920"
                 height="1200">
 
-            <div class="container hero__content">
-                <p class="eyebrow eyebrow--light">Andalusian haute cuisine · Granada</p>
-                <h1 class="hero__title" id="hero-title">Azahar</h1>
-                <p class="hero__lead">An evening of slow, seasonal cooking in a sixteenth-century carmen, with the
+            <div class="container hero-text">
+                <p class="small-title small-title-light">Andalusian haute cuisine · Granada</p>
+                <h1 class="hero-title" id="hero-title">Azahar</h1>
+                <p class="hero-intro">An evening of slow, seasonal cooking in a sixteenth-century carmen, with the
                     Alhambra glowing on the other side of the valley.</p>
-                <div class="hero__actions">
-                    <a href="contact.html#reservation" class="btn btn--gold">
+                <div class="hero-buttons">
+                    <a href="contact.html#reservation" class="button gold-button">
                         <span>Reserve a table</span>
                         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </a>
-                    <a href="menu.html" class="btn btn--ghost"><span>Discover the menu</span></a>
+                    <a href="menu.html" class="button outline-button"><span>Discover the menu</span></a>
                 </div>
             </div>
 
-            <ul class="hero__facts container" aria-label="Key facts">
+            <ul class="hero-facts container" aria-label="Key facts">
                 <li><strong>Two</strong> Michelin stars</li>
                 <li><strong>28</strong> guests per evening</li>
                 <li><strong>Tue – Sat</strong> dinner only</li>
@@ -86,39 +87,42 @@
 
         <section class="section essence" aria-labelledby="essence-title">
             <div class="container">
-                <header class="section-heading">
-                    <p class="eyebrow"><span>01</span> Our essence</p>
+                <header class="section-header">
+                    <p class="small-title"><span>01</span> Our essence</p>
                     <h2 class="section-title" id="essence-title">The scent of orange<br>blossom on a plate</h2>
-                    <p class="section-note">Azahar is the Spanish word for orange blossom: the flower that perfumes
+                    <p class="section-text">Azahar is the Spanish word for orange blossom: the flower that perfumes
                         every patio of the Albaicín each spring.</p>
                 </header>
 
-                <div class="essence__body">
-                    <figure class="media-frame essence__media">
-                        <img src="img/essence.jpg" width="1200" height="900" loading="lazy" decoding="async">
+                <div class="essence-content">
+                    <figure class="photo essence-photo">
+                        <img src="img/essence.jpg"
+                            alt="Seasonal produce from the Vega de Granada: citrus, almonds, olive oil and wild herbs"
+                            width="1200" height="900" loading="lazy" decoding="async">
+                        <figcaption class="photo-label">Produce from the Vega de Granada</figcaption>
                     </figure>
 
-                    <div class="essence__text">
-                        <p class="lead">We cook the landscape that surrounds us: the fertile Vega, the snow of Sierra
+                    <div class="essence-text">
+                        <p class="big-text">We cook the landscape that surrounds us: the fertile Vega, the snow of Sierra
                             Nevada and the subtropical coast of Motril, all less than an hour away.</p>
                         <p>Our cuisine honours eight centuries of Andalusian heritage — Moorish spices, Sephardic
                             sweets, Castilian roasts — reinterpreted with precise, contemporary technique. There is no
                             fixed menu for long: what arrives at the kitchen door each morning decides what reaches your
                             table each night.</p>
 
-                        <ul class="pillars">
-                            <li class="pillar">
-                                <span class="pillar__index">i.</span>
+                        <ul class="values">
+                            <li class="value">
+                                <span class="value-number">i.</span>
                                 <h3>Seasonal</h3>
                                 <p>Over 90% of our produce comes from within 100 km of Granada.</p>
                             </li>
-                            <li class="pillar">
-                                <span class="pillar__index">ii.</span>
+                            <li class="value">
+                                <span class="value-number">ii.</span>
                                 <h3>Heritage</h3>
                                 <p>Recipes rescued from Andalusí and Sephardic cookbooks.</p>
                             </li>
-                            <li class="pillar">
-                                <span class="pillar__index">iii.</span>
+                            <li class="value">
+                                <span class="value-number">iii.</span>
                                 <h3>Intimate</h3>
                                 <p>Only seven tables, so every guest is looked after personally.</p>
                             </li>
@@ -128,18 +132,18 @@
             </div>
         </section>
 
-        <section class="section section--dark story" aria-labelledby="story-title">
-            <div class="container story__grid">
-                <figure class="story__media media-frame media-frame--gold">
+        <section class="section dark-section story" aria-labelledby="story-title">
+            <div class="container story-content">
+                <figure class="story-photo photo photo-gold-frame">
                     <img src="img/story.jpg"
                         alt="Archive photograph of founders Elena and Rafael Morales in the carmen's garden in 1998"
                         width="1200" height="1500" loading="lazy" decoding="async">
-                    <figcaption class="media-tag">Elena Rafael Morales, 1998</figcaption>
+                    <figcaption class="photo-label">Elena &amp; Rafael Morales, 1998</figcaption>
                 </figure>
 
-                <div class="story__text">
-                    <header class="section-heading section-heading--stacked">
-                        <p class="eyebrow eyebrow--light"><span>02</span> Our origin</p>
+                <div class="story-text">
+                    <header class="section-header section-header-simple">
+                        <p class="small-title small-title-light"><span>02</span> Our origin</p>
                         <h2 class="section-title" id="story-title">A family house<br>that became a table</h2>
                     </header>
 
@@ -151,20 +155,20 @@
                         kitchen, but the spirit is the same: a house where guests are received, not served.</p>
 
                     <ol class="timeline" aria-label="Milestones">
-                        <li class="timeline__item">
-                            <span class="timeline__year">1998</span>
+                        <li class="timeline-item">
+                            <span class="timeline-year">1998</span>
                             <p>The carmen opens with four tables and a garden terrace.</p>
                         </li>
-                        <li class="timeline__item">
-                            <span class="timeline__year">2009</span>
+                        <li class="timeline-item">
+                            <span class="timeline-year">2009</span>
                             <p>First Michelin star and the opening of the wine cellar.</p>
                         </li>
-                        <li class="timeline__item">
-                            <span class="timeline__year">2018</span>
+                        <li class="timeline-item">
+                            <span class="timeline-year">2018</span>
                             <p>Lucía Morales takes over the kitchen as head chef.</p>
                         </li>
-                        <li class="timeline__item">
-                            <span class="timeline__year">2023</span>
+                        <li class="timeline-item">
+                            <span class="timeline-year">2023</span>
                             <p>Second Michelin star and Repsol Guide "Three Suns".</p>
                         </li>
                     </ol>
@@ -174,30 +178,26 @@
 
         <section class="section house" aria-labelledby="house-title">
             <div class="container">
-                <header class="section-heading">
-                    <p class="eyebrow"><span>03</span> The house</p>
+                <header class="section-header">
+                    <p class="small-title"><span>03</span> The house</p>
                     <h2 class="section-title" id="house-title">Four rooms,<br>one view</h2>
-                    <p class="section-note">Use the arrows, the dots or the keyboard arrow keys to walk through the
+                    <p class="section-text">Use the arrows, the dots or the keyboard arrow keys to walk through the
                         carmen.</p>
                 </header>
 
                 <div class="slider" role="group" aria-label="Rooms of the restaurant">
-                    <input class="slider__radio" type="radio" name="house" id="house-1" checked
-                        aria-label="Slide 1 of 4: main dining room">
-                    <input class="slider__radio" type="radio" name="house" id="house-2"
-                        aria-label="Slide 2 of 4: terrace">
-                    <input class="slider__radio" type="radio" name="house" id="house-3"
-                        aria-label="Slide 3 of 4: wine cellar">
-                    <input class="slider__radio" type="radio" name="house" id="house-4"
-                        aria-label="Slide 4 of 4: chef's table">
+                    <input class="slider-input" type="radio" name="house" id="house-1" checked aria-label="Slide 1 of 4: main dining room">
+                    <input class="slider-input" type="radio" name="house" id="house-2" aria-label="Slide 2 of 4: terrace">
+                    <input class="slider-input" type="radio" name="house" id="house-3" aria-label="Slide 3 of 4: wine cellar">
+                    <input class="slider-input" type="radio" name="house" id="house-4" aria-label="Slide 4 of 4: chef's table">
 
-                    <div class="slider__viewport">
-                        <ul class="slider__track">
+                    <div class="slider-window">
+                        <ul class="slider-strip">
                             <li class="slide">
                                 <img src="img/house-1.jpg"
                                     alt="Main dining room with seven tables, linen tablecloths and Mudéjar wooden ceiling"
                                     width="1600" height="1000" decoding="async">
-                                <div class="slide__caption">
+                                <div class="slide-caption">
                                     <h3>The dining room</h3>
                                     <p>Seven tables under a restored sixteenth-century Mudéjar ceiling.</p>
                                 </div>
@@ -206,7 +206,7 @@
                                 <img src="img/house-2.jpg"
                                     alt="Garden terrace among orange trees with a view of the Alhambra at sunset"
                                     width="1600" height="1000" decoding="async">
-                                <div class="slide__caption">
+                                <div class="slide-caption">
                                     <h3>The terrace</h3>
                                     <p>Aperitifs among the orange trees, May to October.</p>
                                 </div>
@@ -215,7 +215,7 @@
                                 <img src="img/house-3.jpg"
                                     alt="Stone-vaulted wine cellar with bottles stored on wooden racks" width="1600"
                                     height="1000" decoding="async">
-                                <div class="slide__caption">
+                                <div class="slide-caption">
                                     <h3>The cellar</h3>
                                     <p>Over 900 references, with a focus on Andalusian sherries.</p>
                                 </div>
@@ -224,7 +224,7 @@
                                 <img src="img/house-4.jpg"
                                     alt="Private chef's table for six guests facing the open kitchen" width="1600"
                                     height="1000" decoding="async">
-                                <div class="slide__caption">
+                                <div class="slide-caption">
                                     <h3>The chef's table</h3>
                                     <p>A private table for up to six guests, facing the open kitchen.</p>
                                 </div>
@@ -232,19 +232,20 @@
                         </ul>
                     </div>
 
-                    <div class="slider__arrows" aria-hidden="true">
-                        <label class="slider__arrow slider__arrow--prev" for="house-4" data-for="1">&#10094;</label>
-                        <label class="slider__arrow slider__arrow--prev" for="house-1" data-for="2">&#10094;</label>
-                        <label class="slider__arrow slider__arrow--prev" for="house-2" data-for="3">&#10094;</label>
-                        <label class="slider__arrow slider__arrow--prev" for="house-3" data-for="4">&#10094;</label>
-                        <label class="slider__arrow slider__arrow--next" for="house-2" data-for="1">&#10095;</label>
-                        <label class="slider__arrow slider__arrow--next" for="house-3" data-for="2">&#10095;</label>
-                        <label class="slider__arrow slider__arrow--next" for="house-4" data-for="3">&#10095;</label>
-                        <label class="slider__arrow slider__arrow--next" for="house-1" data-for="4">&#10095;</label>
+                    <!-- Flechas: labels que marcan el radio anterior / siguiente -->
+                    <div class="slider-arrows" aria-hidden="true">
+                        <label class="slider-arrow arrow-prev" for="house-4" data-for="1">&#10094;</label>
+                        <label class="slider-arrow arrow-prev" for="house-1" data-for="2">&#10094;</label>
+                        <label class="slider-arrow arrow-prev" for="house-2" data-for="3">&#10094;</label>
+                        <label class="slider-arrow arrow-prev" for="house-3" data-for="4">&#10094;</label>
+                        <label class="slider-arrow arrow-next" for="house-2" data-for="1">&#10095;</label>
+                        <label class="slider-arrow arrow-next" for="house-3" data-for="2">&#10095;</label>
+                        <label class="slider-arrow arrow-next" for="house-4" data-for="3">&#10095;</label>
+                        <label class="slider-arrow arrow-next" for="house-1" data-for="4">&#10095;</label>
                     </div>
 
                     <!-- Puntos de navegación -->
-                    <div class="slider__dots" aria-hidden="true">
+                    <div class="slider-dots" aria-hidden="true">
                         <label for="house-1"></label>
                         <label for="house-2"></label>
                         <label for="house-3"></label>
@@ -255,7 +256,7 @@
         </section>
 
         <section class="quote" aria-label="A word from our head chef">
-            <figure class="container quote__inner">
+            <figure class="container quote-content">
                 <blockquote>
                     <p>“A great dinner is not a performance. It is a conversation between the land, the cook and the
                         guest.”</p>
@@ -266,14 +267,14 @@
 
         <section class="section explore" aria-labelledby="explore-title">
             <div class="container">
-                <header class="section-heading">
-                    <p class="eyebrow"><span>04</span> Plan your visit</p>
+                <header class="section-header">
+                    <p class="small-title"><span>04</span> Plan your visit</p>
                     <h2 class="section-title" id="explore-title">Before you arrive</h2>
                 </header>
 
-                <ul class="explore__grid">
+                <ul class="explore-cards">
                     <li class="explore-card">
-                        <span class="explore-card__index" aria-hidden="true">01</span>
+                        <span class="explore-card-number" aria-hidden="true">01</span>
                         <h3>Meet the team</h3>
                         <p>From the kitchen brigade to our sommeliers: the people who make every evening.</p>
                         <a class="text-link" href="team.html">
@@ -285,7 +286,7 @@
                         </a>
                     </li>
                     <li class="explore-card">
-                        <span class="explore-card__index" aria-hidden="true">02</span>
+                        <span class="explore-card-number" aria-hidden="true">02</span>
                         <h3>Tasting menus</h3>
                         <p>Two tasting menus and five signature dishes that tell the story of Granada.</p>
                         <a class="text-link" href="menu.html">
@@ -297,7 +298,7 @@
                         </a>
                     </li>
                     <li class="explore-card">
-                        <span class="explore-card__index" aria-hidden="true">03</span>
+                        <span class="explore-card-number" aria-hidden="true">03</span>
                         <h3>Reservations</h3>
                         <p>Tables are released 60 days in advance. We recommend booking early.</p>
                         <a class="text-link" href="contact.html#reservation">
@@ -314,37 +315,36 @@
 
     </main>
 
-    <footer class="site-footer">
-        <div class="container footer__inner">
-            <div class="footer__brand">
-                <a href="index.html" class="brand" aria-label="Azahar - back to Home">
-                    <svg class="brand__logo" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+    <!-- ========================= FOOTER ========================= -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <a href="index.html" class="logo" aria-label="Azahar - back to Home">
+                    <svg class="logo-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
                         <circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="1.5" />
-                        <path
-                            d="M32 10c4 8 4 14 0 22-4-8-4-14 0-22Zm0 44c-4-8-4-14 0-22 4 8 4 14 0 22ZM10 32c8-4 14-4 22 0-8 4-14 4-22 0Zm44 0c-8 4-14 4-22 0 8-4 14-4 22 0Z"
+                        <path d="M32 10c4 8 4 14 0 22-4-8-4-14 0-22Zm0 44c-4-8-4-14 0-22 4 8 4 14 0 22ZM10 32c8-4 14-4 22 0-8 4-14 4-22 0Zm44 0c-8 4-14 4-22 0 8-4 14-4 22 0Z"
                             fill="currentColor" />
                     </svg>
-                    <span class="brand__name">Azahar</span>
+                    <span class="logo-text">Azahar</span>
                 </a>
-                <p class="footer__tagline">Andalusian haute cuisine in the heart of the Albaicín.</p>
+                <p class="footer-slogan">Andalusian haute cuisine in the heart of the Albaicín.</p>
             </div>
 
-            <address class="footer__col">
-                <h2 class="footer__title">Visit</h2>
+            <address class="footer-column">
+                <h2 class="footer-title">Visit</h2>
                 <p>Cuesta del Chapiz 12<br>18010 Granada, Spain</p>
                 <p><a href="tel:+34958123456">+34 958 123 456</a><br>
-                    <a href="mailto:reservations@azahar-granada.com">reservations@azahar-granada.com</a>
-                </p>
+                    <a href="mailto:reservations@azahar-granada.com">reservations@azahar-granada.com</a></p>
             </address>
 
-            <div class="footer__col">
-                <h2 class="footer__title">Hours</h2>
+            <div class="footer-column">
+                <h2 class="footer-title">Hours</h2>
                 <p>Tuesday – Saturday<br>Dinner 19:30 – 23:00</p>
                 <p>Sunday &amp; Monday closed</p>
             </div>
 
-            <nav class="footer__col footer__nav" aria-label="Footer">
-                <h2 class="footer__title">Explore</h2>
+            <nav class="footer-column footer-nav" aria-label="Footer">
+                <h2 class="footer-title">Explore</h2>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="team.html">Team</a></li>
@@ -353,7 +353,7 @@
                 </ul>
             </nav>
 
-            <div class="footer__legal">
+            <div class="footer-bottom">
                 <p>© 2026 Azahar Restaurante. All rights reserved.</p>
                 <ul class="social-list" aria-label="Social media">
                     <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
