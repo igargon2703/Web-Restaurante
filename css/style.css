@@ -583,7 +583,7 @@ strong {
         &:nth-child(3) {
             top: 30px;
             width: 1.1rem;
-            margin-left: 0.32rem;
+            width: 1.75rem;
         }
     }
 }

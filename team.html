@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description"
+        content="Meet the team of Azahar: head chef Lucía Morales, the kitchen brigade, our sommeliers and front of house.">
+    <meta name="author" content="Nacho">
+    <title>Our Team · Azahar Fine Dining</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <script src="js/burguer.js" defer></script>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- ========================= HEADER ========================= -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo" aria-label="Azahar - Home">
+                <svg class="logo-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                    <circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M32 10c4 8 4 14 0 22-4-8-4-14 0-22Zm0 44c-4-8-4-14 0-22 4 8 4 14 0 22ZM10 32c8-4 14-4 22 0-8 4-14 4-22 0Zm44 0c-8 4-14 4-22 0 8-4 14-4 22 0Z"
+                        fill="currentColor" />
+                </svg>
+                <span class="logo-text">Azahar</span>
+            </a>
+
+            <button class="menu-button" id="nav-icon" type="button" aria-expanded="false"
+                aria-controls="primary-navigation" aria-label="Open menu">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </button>
+
+            <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+                <ul class="main-nav-list">
+                    <li><a href="index.html" class="nav-link" data-replace="Home"><span>Home</span></a></li>
+                    <li><a href="team.html" class="nav-link" data-replace="Team" aria-current="page"><span>Team</span></a></li>
+                    <li><a href="menu.html" class="nav-link" data-replace="Menu"><span>Menu</span></a></li>
+                    <li><a href="contact.html" class="nav-link" data-replace="Contact"><span>Contact</span></a></li>
+                </ul>
+                <a href="contact.html#reservation" class="button gold-button nav-book-button">
+                    <span>Book a table</span>
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <p class="nav-info">Albaicín · Granada · Since 1998</p>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- ========================= PAGE HERO ========================= -->
+        <section class="page-top" aria-labelledby="page-title">
+            <img class="page-top-photo" src="img/kitchen-brigade.jpg" alt="" width="1920" height="1000">
+            <div class="container page-top-text">
+                <p class="small-title small-title-light">The people behind Azahar</p>
+                <h1 class="page-top-title" id="page-title">Our team</h1>
+                <p class="page-top-intro">Twenty-two people, one kitchen and a single obsession: that every guest leaves
+                    feeling they have been welcomed into a home.</p>
+            </div>
+        </section>
+
+        <!-- Índice de la jerarquía (navegación interna de la página) -->
+        <nav class="team-index container" aria-label="Team structure">
+            <ol class="team-index-list">
+                <li><a href="#head-chef"><span>01</span> Head Chef</a></li>
+                <li><a href="#kitchen"><span>02</span> Kitchen brigade</a></li>
+                <li><a href="#sommeliers"><span>03</span> Sommeliers</a></li>
+                <li><a href="#management"><span>04</span> Management</a></li>
+            </ol>
+        </nav>
+
+        <!-- ========================= 01 HEAD CHEF ========================= -->
+        <section class="section head-chef" id="head-chef" aria-labelledby="head-chef-title">
+            <div class="container head-chef-content">
+                <figure class="photo photo-gold-frame head-chef-photo">
+                    <img src="img/chef-head.jpg"
+                        alt="Head chef Lucía Morales in a white chef's jacket, standing in the kitchen" width="1200"
+                        height="1500" loading="lazy" decoding="async">
+                    <figcaption class="photo-label">Lucía Morales · Head Chef</figcaption>
+                </figure>
+
+                <div class="head-chef-text">
+                    <header class="section-header section-header-simple">
+                        <p class="small-title"><span>01</span> Head Chef</p>
+                        <h2 class="section-title" id="head-chef-title">Lucía Morales</h2>
+                    </header>
+                    <p class="big-text">Born upstairs from the dining room, Lucía grew up peeling almonds in the kitchen her
+                        parents opened in 1998.</p>
+                    <p>After training at the Basque Culinary Center and working at Mugaritz in San Sebastián and Noma in
+                        Copenhagen, she returned to Granada in 2014. She became head chef in 2018 and led Azahar to its
+                        second Michelin star in 2023.</p>
+                    <p>Her cooking is precise but warm: Andalusian memories presented with Nordic restraint.</p>
+
+                    <dl class="chef-facts">
+                        <div class="chef-fact">
+                            <dt>Training</dt>
+                            <dd>Basque Culinary Center</dd>
+                        </div>
+                        <div class="chef-fact">
+                            <dt>At Azahar since</dt>
+                            <dd>2014</dd>
+                        </div>
+                        <div class="chef-fact">
+                            <dt>Awards</dt>
+                            <dd>Chef of the Year, Madrid Fusión 2024</dd>
+                        </div>
+                    </dl>
+                    <span class="signature" aria-hidden="true">Lucía Morales</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= 02 KITCHEN ========================= -->
+        <section class="section dark-section kitchen" id="kitchen" aria-labelledby="kitchen-title">
+            <div class="container">
+                <header class="section-header">
+                    <p class="small-title small-title-light"><span>02</span> Kitchen brigade</p>
+                    <h2 class="section-title" id="kitchen-title">The heart<br>of the house</h2>
+                    <p class="section-text">Fourteen cooks working in silence, in an open kitchen visible from the
+                        chef's table.</p>
+                </header>
+
+                <!-- Foto del equipo de cocina (requisito del enunciado) -->
+                <figure class="kitchen-photo photo">
+                    <img src="img/kitchen-brigade.jpg"
+                        alt="Group photo of the fourteen members of Azahar's kitchen brigade in white jackets, standing in the open kitchen"
+                        width="1920" height="1000" loading="lazy" decoding="async">
+                    <figcaption class="photo-label">The kitchen brigade, autumn 2026</figcaption>
+                </figure>
+
+                <ul class="team-cards three-columns">
+                    <li class="team-card">
+                        <figure class="team-card-photo">
+                            <img src="img/chef-sous.jpg" alt="Portrait of sous chef Daniel Ortega" width="900"
+                                height="1125" loading="lazy" decoding="async">
+                        </figure>
+                        <div class="team-card-text">
+                            <p class="team-card-role">Sous Chef</p>
+                            <h3 class="team-card-name">Daniel Ortega</h3>
+                            <p>Lucía's right hand for eight years. Runs the service every night and leads our
+                                fermentation and preserves room.</p>
+                        </div>
+                    </li>
+                    <li class="team-card">
+                        <figure class="team-card-photo">
+                            <img src="img/chef-pastry.jpg" alt="Portrait of pastry chef Amira Haddad" width="900"
+                                height="1125" loading="lazy" decoding="async">
+                        </figure>
+                        <div class="team-card-text">
+                            <p class="team-card-role">Pastry Chef</p>
+                            <h3 class="team-card-name">Amira Haddad</h3>
+                            <p>Trained in Paris and Marrakech. Her desserts revive the Sephardic and Andalusí sweets of
+                                medieval Granada.</p>
+                        </div>
+                    </li>
+                    <li class="team-card">
+                        <figure class="team-card-photo">
+                            <img src="img/chef-partie.jpg" alt="Portrait of chef de partie Marcos Vílchez"
+                                width="900" height="1125" loading="lazy" decoding="async">
+                        </figure>
+                        <div class="team-card-text">
+                            <p class="team-card-role">Chef de Partie · Fire &amp; Grill</p>
+                            <h3 class="team-card-name">Marcos Vílchez</h3>
+                            <p>Master of the holm-oak grill. Born in the Alpujarra, he sources our lamb and kid from his
+                                family's farm.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ========================= 03 SOMMELIERS ========================= -->
+        <section class="section sommeliers" id="sommeliers" aria-labelledby="sommeliers-title">
+            <div class="container">
+                <header class="section-header">
+                    <p class="small-title"><span>03</span> Sommeliers</p>
+                    <h2 class="section-title" id="sommeliers-title">Keepers<br>of the cellar</h2>
+                    <p class="section-text">More than 900 references, from rare sherries to the new wines of the
+                        Granada highlands.</p>
+                </header>
+
+                <ul class="team-cards two-columns">
+                    <li class="team-card team-card-wide">
+                        <figure class="team-card-photo">
+                            <img src="img/sommelier-head.jpg" alt="Portrait of head sommelier Carmen Ruiz"
+                                width="900" height="1125" loading="lazy" decoding="async">
+                        </figure>
+                        <div class="team-card-text">
+                            <p class="team-card-role">Head Sommelier</p>
+                            <h3 class="team-card-name">Carmen Ruiz</h3>
+                            <p>Best Sommelier of Spain 2021. She designs both wine pairings and has built one of the
+                                finest sherry collections in Andalusia.</p>
+                        </div>
+                    </li>
+                    <li class="team-card team-card-wide">
+                        <figure class="team-card-photo">
+                            <img src="img/sommelier.jpg" alt="Portrait of sommelier Hugo Lefèvre" width="900"
+                                height="1125" loading="lazy" decoding="async">
+                        </figure>
+                        <div class="team-card-text">
+                            <p class="team-card-role">Sommelier</p>
+                            <h3 class="team-card-name">Hugo Lefèvre</h3>
+                            <p>From Burgundy to Granada. Hugo curates our non-alcoholic pairing of infusions, kombuchas
+                                and pressed juices.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ========================= 04 MANAGEMENT ========================= -->
+        <section class="section beige-section management" id="management" aria-labelledby="management-title">
+            <div class="container">
+                <header class="section-header">
+                    <p class="small-title"><span>04</span> Management &amp; front of house</p>
+                    <h2 class="section-title" id="management-title">The art<br>of hospitality</h2>
+                    <p class="section-text">From your first email to the last glass of sherry, they make sure the
+                        evening flows.</p>
+                </header>
+
+                <ul class="team-cards two-columns">
+                    <li class="team-card team-card-wide">
+                        <figure class="team-card-photo">
+                            <img src="img/manager.jpg" alt="Portrait of general manager Rafael Morales"
+                                width="900" height="1125" loading="lazy" decoding="async">
+                        </figure>
+                        <div class="team-card-text">
+                            <p class="team-card-role">General Manager &amp; Co-founder</p>
+                            <h3 class="team-card-name">Rafael Morales</h3>
+                            <p>Co-founder of Azahar in 1998. Still greets every guest at the door, as he has done for
+                                almost three decades.</p>
+                        </div>
+                    </li>
+                    <li class="team-card team-card-wide">
+                        <figure class="team-card-photo">
+                            <img src="img/maitre.jpg" alt="Portrait of maître d' Sofía Navarro" width="900"
+                                height="1125" loading="lazy" decoding="async">
+                        </figure>
+                        <div class="team-card-text">
+                            <p class="team-card-role">Maître d'</p>
+                            <h3 class="team-card-name">Sofía Navarro</h3>
+                            <p>Leads a dining room team of six. Ask her about the history of the carmen: she knows every
+                                stone.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ========================= CTA ========================= -->
+        <section class="book-banner dark-section" aria-labelledby="cta-title">
+            <div class="container book-banner-content">
+                <h2 class="book-banner-title" id="cta-title">Come and meet us</h2>
+                <p>Ask for the chef's table to watch the brigade at work during your dinner.</p>
+                <a href="contact.html#reservation" class="button gold-button">
+                    <span>Book a table</span>
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================= FOOTER ========================= -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <a href="index.html" class="logo" aria-label="Azahar - back to Home">
+                    <svg class="logo-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                        <circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="1.5" />
+                        <path d="M32 10c4 8 4 14 0 22-4-8-4-14 0-22Zm0 44c-4-8-4-14 0-22 4 8 4 14 0 22ZM10 32c8-4 14-4 22 0-8 4-14 4-22 0Zm44 0c-8 4-14 4-22 0 8-4 14-4 22 0Z"
+                            fill="currentColor" />
+                    </svg>
+                    <span class="logo-text">Azahar</span>
+                </a>
+                <p class="footer-slogan">Andalusian haute cuisine in the heart of the Albaicín.</p>
+            </div>
+
+            <address class="footer-column">
+                <h2 class="footer-title">Visit</h2>
+                <p>Cuesta del Chapiz 12<br>18010 Granada, Spain</p>
+                <p><a href="tel:+34958123456">+34 958 123 456</a><br>
+                    <a href="mailto:reservations@azahar-granada.com">reservations@azahar-granada.com</a></p>
+            </address>
+
+            <div class="footer-column">
+                <h2 class="footer-title">Hours</h2>
+                <p>Tuesday – Saturday<br>Dinner 19:30 – 23:00</p>
+                <p>Sunday &amp; Monday closed</p>
+            </div>
+
+            <nav class="footer-column footer-nav" aria-label="Footer">
+                <h2 class="footer-title">Explore</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-bottom">
+                <p>© 2026 Azahar Restaurante. All rights reserved.</p>
+                <ul class="social-list" aria-label="Social media">
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram (opens in a new tab)">In</a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook (opens in a new tab)">Fb</a></li>
+                    <li><a href="https://www.tripadvisor.com/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Tripadvisor (opens in a new tab)">Ta</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
